@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxCaracteristica = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxSubCaracteristica = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtHU = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tbnHuOk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbxCaracteristica
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbxCaracteristica.FormattingEnabled = true;
+            this.cbxCaracteristica.Location = new System.Drawing.Point(81, 43);
+            this.cbxCaracteristica.Name = "cbxCaracteristica";
+            this.cbxCaracteristica.Size = new System.Drawing.Size(223, 21);
+            this.cbxCaracteristica.TabIndex = 0;
             // 
             // label1
             // 
@@ -69,28 +68,28 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "SubCaracteristica";
             // 
-            // comboBox2
+            // cbxSubCaracteristica
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(81, 94);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 2;
+            this.cbxSubCaracteristica.FormattingEnabled = true;
+            this.cbxSubCaracteristica.Location = new System.Drawing.Point(81, 94);
+            this.cbxSubCaracteristica.Name = "cbxSubCaracteristica";
+            this.cbxSubCaracteristica.Size = new System.Drawing.Size(223, 21);
+            this.cbxSubCaracteristica.TabIndex = 2;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(81, 182);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(391, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(436, 212);
             this.dataGridView1.TabIndex = 4;
             // 
-            // textBox1
+            // txtHU
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtHU.Location = new System.Drawing.Point(113, 142);
+            this.txtHU.Name = "txtHU";
+            this.txtHU.Size = new System.Drawing.Size(161, 20);
+            this.txtHU.TabIndex = 5;
             // 
             // label3
             // 
@@ -101,58 +100,48 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "HU:";
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(219, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(280, 142);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnQuitar
             // 
-            this.button2.Location = new System.Drawing.Point(300, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Quitar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnQuitar.Location = new System.Drawing.Point(361, 142);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitar.TabIndex = 8;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // tbnHuOk
             // 
-            this.button3.Location = new System.Drawing.Point(381, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "HU Cumple";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(351, 45);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.tbnHuOk.Location = new System.Drawing.Point(442, 142);
+            this.tbnHuOk.Name = "tbnHuOk";
+            this.tbnHuOk.Size = new System.Drawing.Size(75, 23);
+            this.tbnHuOk.TabIndex = 9;
+            this.tbnHuOk.Text = "HU Cumple";
+            this.tbnHuOk.UseVisualStyleBackColor = true;
             // 
             // Evaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(557, 450);
+            this.Controls.Add(this.tbnHuOk);
+            this.Controls.Add(this.btnQuitar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtHU);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbxSubCaracteristica);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxCaracteristica);
             this.Name = "Evaluador";
             this.Text = "Evaluador ISO25010";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -163,18 +152,17 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCaracteristica;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxSubCaracteristica;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtHU;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnQuitar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button tbnHuOk;
     }
 }
 
