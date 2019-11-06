@@ -44,6 +44,7 @@
             this.huName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cumple = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,11 +185,21 @@
             this.valor.ReadOnly = true;
             this.valor.Width = 150;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(378, 102);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "label5";
+            // 
             // Evaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbnHuOk);
             this.Controls.Add(this.btnQuitar);
@@ -227,6 +238,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn huName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cumple;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.Label label5;
     }
 }
 

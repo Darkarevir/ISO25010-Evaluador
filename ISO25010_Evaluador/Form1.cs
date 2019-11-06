@@ -57,8 +57,9 @@ namespace ISO25010_Evaluador
         {
             try
             {
-                UwU = Convert.ToInt32( cbxCaracteristica.SelectedValue);
-                label4.Text = tblCaracteristicas.Rows[UwU].ItemArray[2].ToString();
+                UwU = Convert.ToInt32(cbxCaracteristica.SelectedValue);
+                label5.Text = UwU.ToString();
+                label4.Text = tblCaracteristicas.Rows[UwU-1].ItemArray[2].ToString();
                 tblsubc = objConexion.getSubCarta(UwU).Tables["sub_caracteristicas"];
                 cbxSubCaracteristica.DataSource = tblsubc;
                 cbxSubCaracteristica.DisplayMember = "sub_caracteristica";
