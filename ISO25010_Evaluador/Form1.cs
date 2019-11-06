@@ -34,7 +34,9 @@ namespace ISO25010_Evaluador
 
         void showData()
         {
+
             tblCaracteristicas = objConexion.get_caracteristicas().Tables["caracteristicas"];
+            label4.Text = tblCaracteristicas.Rows[1].ItemArray[2].ToString();
             cbxCaracteristica.DataSource = tblCaracteristicas;
             cbxCaracteristica.DisplayMember = "caracteristica";
             cbxCaracteristica.ValueMember = "id_c";
@@ -56,6 +58,7 @@ namespace ISO25010_Evaluador
             try
             {
                 UwU = Convert.ToInt32( cbxCaracteristica.SelectedValue);
+                label4.Text = tblCaracteristicas.Rows[UwU].ItemArray[2].ToString();
                 tblsubc = objConexion.getSubCarta(UwU).Tables["sub_caracteristicas"];
                 cbxSubCaracteristica.DataSource = tblsubc;
                 cbxSubCaracteristica.DisplayMember = "sub_caracteristica";
