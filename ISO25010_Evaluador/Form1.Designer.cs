@@ -39,6 +39,7 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tbnHuOk = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.cbxCaracteristica.Name = "cbxCaracteristica";
             this.cbxCaracteristica.Size = new System.Drawing.Size(223, 21);
             this.cbxCaracteristica.TabIndex = 0;
+            this.cbxCaracteristica.TextChanged += new System.EventHandler(this.CbxCaracteristica_TextChanged);
             // 
             // label1
             // 
@@ -75,6 +77,7 @@
             this.cbxSubCaracteristica.Name = "cbxSubCaracteristica";
             this.cbxSubCaracteristica.Size = new System.Drawing.Size(223, 21);
             this.cbxSubCaracteristica.TabIndex = 2;
+            this.cbxSubCaracteristica.TextChanged += new System.EventHandler(this.CbxSubCaracteristica_TextChanged);
             // 
             // dataGridView1
             // 
@@ -127,11 +130,21 @@
             this.tbnHuOk.Text = "HU Cumple";
             this.tbnHuOk.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(378, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
+            // 
             // Evaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tbnHuOk);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnAgregar);
@@ -164,6 +177,7 @@
         private System.Windows.Forms.Button btnQuitar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button tbnHuOk;
+        private System.Windows.Forms.Label label4;
     }
 }
 

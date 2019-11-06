@@ -14,6 +14,8 @@ namespace ISO25010_Evaluador
     {
         mySqlConexion objConexion = new mySqlConexion();
         DataTable tblCaracteristicas = new DataTable();
+        DataTable tblsubc = new DataTable();
+        int UwU;
 
         public Evaluador()
         {
@@ -23,6 +25,8 @@ namespace ISO25010_Evaluador
         private void Evaluador_Load(object sender, EventArgs e)
         {
             showData();
+            showDataSub();
+
         }
 
         void showData()
@@ -31,6 +35,35 @@ namespace ISO25010_Evaluador
             cbxCaracteristica.DataSource = tblCaracteristicas;
             cbxCaracteristica.DisplayMember = "caracteristica";
             cbxCaracteristica.ValueMember = "id_c";
+        }
+        void showDataSub() {
+            tblsubc = objConexion.getSubCarta(1).Tables["sub_caracteristicas"];
+            cbxSubCaracteristica.DataSource = tblsubc;
+            cbxSubCaracteristica.DisplayMember = "sub_caracteristicas";
+            cbxSubCaracteristica.ValueMember = "id_sc";
+        }
+
+        private void CbxSubCaracteristica_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCaracteristica_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                UwU = Convert.ToInt32( cbxCaracteristica.SelectedValue);
+                tblsubc = objConexion.getSubCarta(UwU).Tables["sub_caracteristicas"];
+                cbxSubCaracteristica.DataSource = tblsubc;
+                cbxSubCaracteristica.DisplayMember = "sub_caracteristicas";
+                cbxSubCaracteristica.ValueMember = "id_sc";
+
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
     }
 }

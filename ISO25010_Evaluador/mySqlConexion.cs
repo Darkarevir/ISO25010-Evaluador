@@ -57,5 +57,19 @@ namespace ISO25010_Evaluador
 
             return dataset;
         }
+
+        public DataSet getSubCarta(int id_C) {
+
+            DataSet dso = new DataSet();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            dso.Clear();
+            comandSQL.Connection = conexion;
+            comandSQL.CommandText = "SELECT * from sub_caracteristicas WHERE id_c = '" + id_C+"' ";
+
+            da.SelectCommand = comandSQL;
+            da.Fill(dso, "sub_caracteristicas");
+
+            return dso;
+        }
     }
 }
