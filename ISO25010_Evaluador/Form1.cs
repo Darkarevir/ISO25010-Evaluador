@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ISO25010_Evaluador
 {
-    public partial class Form1 : Form
+    public partial class Evaluador : Form
     {
-        public Form1()
+        public Evaluador()
         {
             InitializeComponent();
         }
