@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxSubCaracteristica = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHu = new System.Windows.Forms.DataGridView();
             this.txtHU = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -40,7 +40,11 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tbnHuOk = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.subCaracteristica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.huName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cumple = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHu)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCaracteristica
@@ -79,13 +83,21 @@
             this.cbxSubCaracteristica.TabIndex = 2;
             this.cbxSubCaracteristica.TextChanged += new System.EventHandler(this.CbxSubCaracteristica_TextChanged);
             // 
-            // dataGridView1
+            // dgvHu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(81, 182);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(436, 212);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvHu.AllowUserToAddRows = false;
+            this.dgvHu.AllowUserToDeleteRows = false;
+            this.dgvHu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.subCaracteristica,
+            this.huName,
+            this.cumple,
+            this.valor});
+            this.dgvHu.Location = new System.Drawing.Point(81, 182);
+            this.dgvHu.Name = "dgvHu";
+            this.dgvHu.ReadOnly = true;
+            this.dgvHu.Size = new System.Drawing.Size(645, 212);
+            this.dgvHu.TabIndex = 4;
             // 
             // txtHU
             // 
@@ -111,6 +123,7 @@
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // btnQuitar
             // 
@@ -139,18 +152,50 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "label4";
             // 
+            // subCaracteristica
+            // 
+            this.subCaracteristica.HeaderText = "SUBCARACTERISTICA";
+            this.subCaracteristica.MinimumWidth = 150;
+            this.subCaracteristica.Name = "subCaracteristica";
+            this.subCaracteristica.ReadOnly = true;
+            this.subCaracteristica.Width = 150;
+            // 
+            // huName
+            // 
+            this.huName.HeaderText = "NOMBRE HU";
+            this.huName.MinimumWidth = 150;
+            this.huName.Name = "huName";
+            this.huName.ReadOnly = true;
+            this.huName.Width = 150;
+            // 
+            // cumple
+            // 
+            this.cumple.HeaderText = "CUMPLE";
+            this.cumple.MinimumWidth = 150;
+            this.cumple.Name = "cumple";
+            this.cumple.ReadOnly = true;
+            this.cumple.Width = 150;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "VALOR";
+            this.valor.MinimumWidth = 150;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 150;
+            // 
             // Evaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 450);
+            this.ClientSize = new System.Drawing.Size(790, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbnHuOk);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtHU);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvHu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxSubCaracteristica);
             this.Controls.Add(this.label1);
@@ -158,7 +203,7 @@
             this.Name = "Evaluador";
             this.Text = "Evaluador ISO25010";
             this.Load += new System.EventHandler(this.Evaluador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +215,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxSubCaracteristica;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHu;
         private System.Windows.Forms.TextBox txtHU;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregar;
@@ -178,6 +223,10 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button tbnHuOk;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subCaracteristica;
+        private System.Windows.Forms.DataGridViewTextBoxColumn huName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cumple;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }
 

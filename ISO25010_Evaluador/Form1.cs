@@ -14,6 +14,7 @@ namespace ISO25010_Evaluador
     {
         mySqlConexion objConexion = new mySqlConexion();
         DataTable tblCaracteristicas = new DataTable();
+        DataTable soloQuieroElValor = new DataTable();
         DataTable tblsubc = new DataTable();
         int UwU;
 
@@ -28,6 +29,8 @@ namespace ISO25010_Evaluador
             showDataSub();
 
         }
+
+   
 
         void showData()
         {
@@ -64,6 +67,22 @@ namespace ISO25010_Evaluador
 
                 
             }
+        }
+
+        void addRow() {
+            //soloQuieroElValor = objConexion.get_caracteristicas().Tables["caracteristicas"];
+
+            DataGridViewRow fila = new DataGridViewRow();
+            fila.CreateCells(dgvHu);
+            fila.Cells[0].Value = cbxSubCaracteristica.Text;
+            fila.Cells[1].Value = txtHU.Text;
+
+            dgvHu.Rows.Add(fila);
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            addRow();
         }
     }
 }
