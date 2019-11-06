@@ -36,7 +36,7 @@ namespace ISO25010_Evaluador
         {
 
             tblCaracteristicas = objConexion.get_caracteristicas().Tables["caracteristicas"];
-            label4.Text = tblCaracteristicas.Rows[1].ItemArray[2].ToString();
+            label4.Text = tblCaracteristicas.Rows[0].ItemArray[2].ToString();
             cbxCaracteristica.DataSource = tblCaracteristicas;
             cbxCaracteristica.DisplayMember = "caracteristica";
             cbxCaracteristica.ValueMember = "id_c";
@@ -80,6 +80,7 @@ namespace ISO25010_Evaluador
             fila.CreateCells(dgvHu);
             fila.Cells[0].Value = cbxSubCaracteristica.Text;
             fila.Cells[1].Value = txtHU.Text;
+            fila.Cells[2].Value = cbCumple.Checked;
 
             dgvHu.Rows.Add(fila);
         }

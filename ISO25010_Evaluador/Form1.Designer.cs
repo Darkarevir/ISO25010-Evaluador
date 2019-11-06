@@ -40,11 +40,12 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tbnHuOk = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.subCaracteristica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.huName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cumple = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cumple = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cbCumple = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,6 @@
             this.valor});
             this.dgvHu.Location = new System.Drawing.Point(81, 182);
             this.dgvHu.Name = "dgvHu";
-            this.dgvHu.ReadOnly = true;
             this.dgvHu.Size = new System.Drawing.Size(645, 212);
             this.dgvHu.TabIndex = 4;
             // 
@@ -153,38 +153,6 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "label4";
             // 
-            // subCaracteristica
-            // 
-            this.subCaracteristica.HeaderText = "SUBCARACTERISTICA";
-            this.subCaracteristica.MinimumWidth = 150;
-            this.subCaracteristica.Name = "subCaracteristica";
-            this.subCaracteristica.ReadOnly = true;
-            this.subCaracteristica.Width = 150;
-            // 
-            // huName
-            // 
-            this.huName.HeaderText = "NOMBRE HU";
-            this.huName.MinimumWidth = 150;
-            this.huName.Name = "huName";
-            this.huName.ReadOnly = true;
-            this.huName.Width = 150;
-            // 
-            // cumple
-            // 
-            this.cumple.HeaderText = "CUMPLE";
-            this.cumple.MinimumWidth = 150;
-            this.cumple.Name = "cumple";
-            this.cumple.ReadOnly = true;
-            this.cumple.Width = 150;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "VALOR";
-            this.valor.MinimumWidth = 150;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 150;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -194,11 +162,52 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "label5";
             // 
+            // subCaracteristica
+            // 
+            this.subCaracteristica.HeaderText = "SUBCARACTERISTICA";
+            this.subCaracteristica.MinimumWidth = 150;
+            this.subCaracteristica.Name = "subCaracteristica";
+            this.subCaracteristica.Width = 150;
+            // 
+            // huName
+            // 
+            this.huName.HeaderText = "NOMBRE HU";
+            this.huName.MinimumWidth = 150;
+            this.huName.Name = "huName";
+            this.huName.Width = 150;
+            // 
+            // cumple
+            // 
+            this.cumple.HeaderText = "CUMPLE";
+            this.cumple.MinimumWidth = 150;
+            this.cumple.Name = "cumple";
+            this.cumple.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cumple.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cumple.Width = 150;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "VALOR";
+            this.valor.MinimumWidth = 150;
+            this.valor.Name = "valor";
+            this.valor.Width = 150;
+            // 
+            // cbCumple
+            // 
+            this.cbCumple.AutoSize = true;
+            this.cbCumple.Location = new System.Drawing.Point(523, 148);
+            this.cbCumple.Name = "cbCumple";
+            this.cbCumple.Size = new System.Drawing.Size(80, 17);
+            this.cbCumple.TabIndex = 12;
+            this.cbCumple.Text = "checkBox1";
+            this.cbCumple.UseVisualStyleBackColor = true;
+            // 
             // Evaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 450);
+            this.Controls.Add(this.cbCumple);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbnHuOk);
@@ -234,11 +243,12 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button tbnHuOk;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn subCaracteristica;
         private System.Windows.Forms.DataGridViewTextBoxColumn huName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cumple;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn cumple;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox cbCumple;
     }
 }
 
