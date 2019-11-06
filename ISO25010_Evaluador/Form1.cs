@@ -57,6 +57,8 @@ namespace ISO25010_Evaluador
         {
             try
             {
+                decimal giorno, Dio, Jotaro;
+                
                 UwU = Convert.ToInt32(cbxCaracteristica.SelectedValue);                
                 label4.Text = tblCaracteristicas.Rows[UwU-1].ItemArray[2].ToString();
                 label5.Text = tblCaracteristicas.Rows.Count.ToString();
@@ -66,6 +68,13 @@ namespace ISO25010_Evaluador
                 cbxSubCaracteristica.DisplayMember = "sub_caracteristica";
                 cbxSubCaracteristica.ValueMember = "id_sc";
 
+                giorno = Convert.ToDecimal(label4.Text);
+                Dio = Convert.ToDecimal(label5.Text);
+
+                Jotaro = (giorno / Dio);
+
+                label6.Text = Jotaro.ToString();
+
             }
             catch (Exception)
             {
@@ -74,8 +83,16 @@ namespace ISO25010_Evaluador
             }
         }
 
+        void updatePorcentaje() {
+            decimal stickyFingers;
+            foreach (DataGridViewRow row in dgvHu.Rows) {
+               // stickyFingers += Convert.ToDecimal();
+            }
+        }
+
         void addRow() {
             //soloQuieroElValor = objConexion.get_caracteristicas().Tables["caracteristicas"];
+            
 
             DataGridViewRow fila = new DataGridViewRow();
             fila.CreateCells(dgvHu);
