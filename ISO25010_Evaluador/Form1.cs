@@ -39,7 +39,7 @@ namespace ISO25010_Evaluador
         void showDataSub() {
             tblsubc = objConexion.getSubCarta(1).Tables["sub_caracteristicas"];
             cbxSubCaracteristica.DataSource = tblsubc;
-            cbxSubCaracteristica.DisplayMember = "sub_caracteristicas";
+            cbxSubCaracteristica.DisplayMember = "sub_caracteristica";
             cbxSubCaracteristica.ValueMember = "id_sc";
         }
 
@@ -55,7 +55,7 @@ namespace ISO25010_Evaluador
                 UwU = Convert.ToInt32( cbxCaracteristica.SelectedValue);
                 tblsubc = objConexion.getSubCarta(UwU).Tables["sub_caracteristicas"];
                 cbxSubCaracteristica.DataSource = tblsubc;
-                cbxSubCaracteristica.DisplayMember = "sub_caracteristicas";
+                cbxSubCaracteristica.DisplayMember = "sub_caracteristica";
                 cbxSubCaracteristica.ValueMember = "id_sc";
 
             }
