@@ -18,9 +18,9 @@ namespace ISO25010_Evaluador
 
         DataSet dataset = new DataSet();
         DataSet ds = new DataSet();
-        public void conexionMyadmin()
+        public mySqlConexion()
         {
-            String server = "localhost";
+            String server = "127.0.0.1";
             String puerto = "3306";
             String usuario = "root";
             String password = "";
@@ -35,6 +35,8 @@ namespace ISO25010_Evaluador
                 "; Convert Zero Datetime=True";
             conexion.ConnectionString = cadena_conexion;
             conexion.Open();
+
+            
         }
 
         void executeSQL(string sql)
