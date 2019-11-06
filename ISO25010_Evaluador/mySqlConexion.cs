@@ -43,5 +43,17 @@ namespace ISO25010_Evaluador
             comandSQL.CommandText = sql;
             comandSQL.ExecuteNonQuery();
         }
+
+        public DataSet get_caracteristicas()
+        {
+            dataset.Clear();
+            comandSQL.Connection = conexion;
+            comandSQL.CommandText = "SELECT * FROM caracteristicas";
+
+            dataAdapter.SelectCommand = comandSQL;
+            dataAdapter.Fill(dataset, "caracteristicas");
+
+            return dataset;
+        }
     }
 }

@@ -144,6 +144,7 @@
             this.Controls.Add(this.cbxCaracteristica);
             this.Name = "Evaluador";
             this.Text = "Evaluador ISO25010";
+            this.Load += new System.EventHandler(this.Evaluador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

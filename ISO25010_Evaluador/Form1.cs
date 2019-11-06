@@ -12,9 +12,25 @@ namespace ISO25010_Evaluador
 {
     public partial class Evaluador : Form
     {
+        mySqlConexion objConexion = new mySqlConexion();
+        DataTable tblCaracteristicas = new DataTable();
+
         public Evaluador()
         {
             InitializeComponent();
+        }
+
+        private void Evaluador_Load(object sender, EventArgs e)
+        {
+            showData();
+        }
+
+        void showData()
+        {
+            tblCaracteristicas = objConexion.get_caracteristicas().Tables["caracteristicas"];
+            cbxCaracteristica.DataSource = tblCaracteristicas;
+            cbxCaracteristica.DisplayMember = "caracteristica";
+            cbxCaracteristica.ValueMember = "id_c";
         }
     }
 }
