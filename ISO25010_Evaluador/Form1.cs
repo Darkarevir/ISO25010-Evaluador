@@ -113,6 +113,8 @@ namespace ISO25010_Evaluador
 
             FinTheChat = Convert.ToDecimal(label6.Text) / ewe;
 
+            valorHU.Text = String.Format("{0:0.0000}", FinTheChat);
+
             label7.Text = "Cada HU vale: "+ String.Format("{0:0.0000}", FinTheChat);
             int suma = Convert.ToInt32(dgvHu.Rows.Count);
 
@@ -130,6 +132,29 @@ namespace ISO25010_Evaluador
                 label8.Text = fOwO.ToString();
             }
             
+        }
+
+        private void TbnOk_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                objConexion.deletehu(UwU);
+                foreach (DataGridViewRow row in dgvHu.Rows)
+                {
+                  
+                    objConexion.insertHu(UwU,
+                       row.Cells["huName"].Value.ToString(),
+                      (bool)row.Cells["cumple"].Value,
+                      valorHU.Text.ToString());
+                    
+                }
+                MessageBox.Show("HU guardadas", "Guardado");
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

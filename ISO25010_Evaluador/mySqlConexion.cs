@@ -71,5 +71,28 @@ namespace ISO25010_Evaluador
 
             return dso;
         }
+
+        public void insertHu(int idsc, string nombre, Boolean cumple, string valor)
+        {
+            string sql = "INSERT INTO hu(id_sc, nombre, cumple, valor) VALUES(?idsc, ?nombre, ?cumple, ?valor)";
+
+            comandSQL.Parameters.Clear();
+            comandSQL.Parameters.AddWithValue("?idsc", idsc);
+            comandSQL.Parameters.AddWithValue("?nombre", nombre);
+            comandSQL.Parameters.AddWithValue("?cumple", cumple);
+            comandSQL.Parameters.AddWithValue("?valor", valor);
+
+            executeSQL(sql);
+        }
+
+        public void deletehu (int idsc)
+        {
+            string sql = "DELETE FROM hu WHERE id_sc=?idsc";
+
+            comandSQL.Parameters.Clear();
+            comandSQL.Parameters.AddWithValue("?idsc", idsc);
+
+            executeSQL(sql);
+        }
     }
 }
