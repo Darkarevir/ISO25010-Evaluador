@@ -106,6 +106,16 @@ namespace ISO25010_Evaluador
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             addRow();
+
+            int ewe = dgvHu.Rows.Count;
+
+            decimal FinTheChat;
+
+            FinTheChat = Convert.ToDecimal(label6.Text) / ewe;
+
+            label7.Text = "Cada HU vale: "+ String.Format("{0:0.0000}", FinTheChat);
+
+            
         }
     }
 }
