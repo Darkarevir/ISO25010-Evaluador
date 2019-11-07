@@ -114,7 +114,21 @@ namespace ISO25010_Evaluador
             FinTheChat = Convert.ToDecimal(label6.Text) / ewe;
 
             label7.Text = "Cada HU vale: "+ String.Format("{0:0.0000}", FinTheChat);
+            int suma = Convert.ToInt32(dgvHu.Rows.Count);
 
+            decimal fOwO = 0.00M;
+            foreach (DataGridViewRow row in dgvHu.Rows)
+            {
+                DataGridViewCheckBoxCell cell = row.Cells[2] as DataGridViewCheckBoxCell;
+                if (cell.Value != null)
+                {
+                    
+                        fOwO = FinTheChat + suma;
+                    
+                    
+                }
+                label8.Text = fOwO.ToString();
+            }
             
         }
     }
