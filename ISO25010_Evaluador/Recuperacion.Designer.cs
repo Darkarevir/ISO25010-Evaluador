@@ -32,6 +32,9 @@
             this.cbxSubCaracteristica = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxCaracteristica = new System.Windows.Forms.ComboBox();
+            this.dgvChingueAsuMadreElAmerica = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChingueAsuMadreElAmerica)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -68,17 +71,37 @@
             this.cbxCaracteristica.Size = new System.Drawing.Size(223, 21);
             this.cbxCaracteristica.TabIndex = 4;
             // 
+            // dgvChingueAsuMadreElAmerica
+            // 
+            this.dgvChingueAsuMadreElAmerica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChingueAsuMadreElAmerica.Location = new System.Drawing.Point(25, 155);
+            this.dgvChingueAsuMadreElAmerica.Name = "dgvChingueAsuMadreElAmerica";
+            this.dgvChingueAsuMadreElAmerica.Size = new System.Drawing.Size(966, 374);
+            this.dgvChingueAsuMadreElAmerica.TabIndex = 8;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(916, 89);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
             // Recuperacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1058, 607);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dgvChingueAsuMadreElAmerica);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxSubCaracteristica);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxCaracteristica);
             this.Name = "Recuperacion";
             this.Text = "Recuperacion";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChingueAsuMadreElAmerica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,5 +113,7 @@
         private System.Windows.Forms.ComboBox cbxSubCaracteristica;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxCaracteristica;
+        private System.Windows.Forms.DataGridView dgvChingueAsuMadreElAmerica;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
