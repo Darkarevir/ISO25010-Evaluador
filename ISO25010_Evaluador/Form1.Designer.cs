@@ -50,6 +50,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.valorHU = new System.Windows.Forms.Label();
+            this.btnEvaluar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,11 +249,22 @@
             this.valorHU.TabIndex = 16;
             this.valorHU.Text = "Valor HU";
             // 
+            // btnEvaluar
+            // 
+            this.btnEvaluar.Location = new System.Drawing.Point(602, 102);
+            this.btnEvaluar.Name = "btnEvaluar";
+            this.btnEvaluar.Size = new System.Drawing.Size(75, 23);
+            this.btnEvaluar.TabIndex = 17;
+            this.btnEvaluar.Text = "Evaluar";
+            this.btnEvaluar.UseVisualStyleBackColor = true;
+            this.btnEvaluar.Click += new System.EventHandler(this.BtnEvaluar_Click);
+            // 
             // Evaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 450);
+            this.Controls.Add(this.btnEvaluar);
             this.Controls.Add(this.valorHU);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -303,6 +315,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label valorHU;
+        private System.Windows.Forms.Button btnEvaluar;
     }
 }
 

@@ -156,5 +156,11 @@ namespace ISO25010_Evaluador
 
             }
         }
+
+        private void BtnEvaluar_Click(object sender, EventArgs e)
+        {
+            Recuperacion owo = new Recuperacion();
+            owo.ShowDialog();
+        }
     }
 }
