@@ -74,5 +74,20 @@ namespace ISO25010_Evaluador
 
             }
         }
+
+        private void CbxSubCaracteristica_TextChanged(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                int idSub = Convert.ToInt32(cbxSubCaracteristica.SelectedValue);
+                dgvChingueAsuMadreElAmerica.DataSource = objConexion.getOwO(idSub).Tables["hu"].DefaultView;
+            }
+            catch (Exception)
+            {
+
+               
+            }
+        }
     }
 }

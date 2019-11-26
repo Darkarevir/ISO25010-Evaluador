@@ -58,6 +58,19 @@ namespace ISO25010_Evaluador
             return dataset;
         }
 
+        public DataSet getOwO(int id_SubHu) {
+            DataSet dataOwO = new DataSet();
+            dataOwO.Clear();
+
+            comandSQL.Connection = conexion;
+            comandSQL.CommandText = "SELECT * FROM hu WHERE id_sc ='" + id_SubHu + "'";
+
+            dataAdapter.SelectCommand = comandSQL;
+            dataAdapter.Fill(dataOwO, "hu");
+
+            return dataOwO;
+        }
+
         public DataSet getSubCarta(int id_C) {
 
             DataSet dso = new DataSet();

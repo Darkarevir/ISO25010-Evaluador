@@ -188,7 +188,6 @@
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "label4";
-            this.label4.Visible = false;
             // 
             // label5
             // 
@@ -198,7 +197,6 @@
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "label5";
-            this.label5.Visible = false;
             // 
             // cbCumple
             // 
@@ -219,7 +217,6 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "label6";
-            this.label6.Visible = false;
             // 
             // label7
             // 
@@ -238,7 +235,6 @@
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "label8";
-            this.label8.Visible = false;
             // 
             // valorHU
             // 

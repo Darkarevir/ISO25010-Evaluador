@@ -59,6 +59,7 @@
             this.cbxSubCaracteristica.Name = "cbxSubCaracteristica";
             this.cbxSubCaracteristica.Size = new System.Drawing.Size(223, 21);
             this.cbxSubCaracteristica.TabIndex = 6;
+            this.cbxSubCaracteristica.TextChanged += new System.EventHandler(this.CbxSubCaracteristica_TextChanged);
             // 
             // label1
             // 
@@ -152,7 +153,6 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "label3";
-            this.label3.Visible = false;
             // 
             // Recuperacion
             // 
