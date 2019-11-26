@@ -89,5 +89,30 @@ namespace ISO25010_Evaluador
                
             }
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+
+
+            try
+             {
+
+                 objConexion.deletehu(UwU);
+                 foreach (DataGridViewRow row in dgvChingueAsuMadreElAmerica.Rows)
+                 {
+
+                     objConexion.insertHu(UwU,
+                      row.Cells["nombre"].Value.ToString(),
+                      (bool)row.Cells["cumple"].Value,
+                      row.Cells["valor"].Value.ToString());
+
+                 }
+                 MessageBox.Show("HU guardadas", "Guardado");
+             }
+             catch (Exception)
+             {
+                 MessageBox.Show("Error");
+             }
+        }
     }
 }

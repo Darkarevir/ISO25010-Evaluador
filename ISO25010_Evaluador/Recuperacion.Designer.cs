@@ -81,6 +81,8 @@
             // 
             // dgvChingueAsuMadreElAmerica
             // 
+            this.dgvChingueAsuMadreElAmerica.AllowUserToAddRows = false;
+            this.dgvChingueAsuMadreElAmerica.AllowUserToDeleteRows = false;
             this.dgvChingueAsuMadreElAmerica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChingueAsuMadreElAmerica.Location = new System.Drawing.Point(28, 156);
             this.dgvChingueAsuMadreElAmerica.Name = "dgvChingueAsuMadreElAmerica";
@@ -89,12 +91,13 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(916, 89);
+            this.btnGuardar.Location = new System.Drawing.Point(919, 118);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // label4
             // 
@@ -104,7 +107,6 @@
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "label4";
-            this.label4.Visible = false;
             // 
             // label8
             // 
