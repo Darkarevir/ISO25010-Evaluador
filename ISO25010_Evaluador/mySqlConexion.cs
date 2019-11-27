@@ -70,6 +70,7 @@ namespace ISO25010_Evaluador
 
             return dataOwO;
         }
+        
 
         public DataSet getSubCarta(int id_C) {
 
@@ -84,6 +85,22 @@ namespace ISO25010_Evaluador
 
             return dso;
         }
+        public DataSet getSubDesc(int id_Sc)
+        {
+
+            DataSet dsao = new DataSet();
+            MySqlDataAdapter daa = new MySqlDataAdapter();
+            dsao.Clear();
+            comandSQL.Connection = conexion;
+            comandSQL.CommandText = "SELECT * from sub_caracteristicas WHERE id_sc = '" + id_Sc + "' ";
+
+            daa.SelectCommand = comandSQL;
+            daa.Fill(dsao, "sub_caracteristicas");
+
+            return dsao;
+        }
+
+
 
         public void insertHu(int idsc, string nombre, Boolean cumple, string valor)
         {

@@ -16,6 +16,7 @@ namespace ISO25010_Evaluador
         DataTable tblCaracteristicas = new DataTable();
         DataTable soloQuieroElValor = new DataTable();
         DataTable tblsubc = new DataTable();
+        DataTable f = new DataTable();
         int UwU;
         public Recuperacion()
         {
@@ -84,12 +85,16 @@ namespace ISO25010_Evaluador
                 int idSub = Convert.ToInt32(cbxSubCaracteristica.SelectedValue);
                 dgvChingueAsuMadreElAmerica.DataSource = objConexion.getOwO(idSub).Tables["hu"].DefaultView;
 
+                f = objConexion.getSubDesc(1).Tables["sub_caracteristicas"];
+
+                lblDescripcion.Text = f.Rows[0].ItemArray[2].ToString();
             }
             catch (Exception)
             {
 
                
             }
+           
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
