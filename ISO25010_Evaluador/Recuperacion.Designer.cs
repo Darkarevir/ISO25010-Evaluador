@@ -40,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.resultados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChingueAsuMadreElAmerica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +92,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(919, 118);
+            this.btnGuardar.Location = new System.Drawing.Point(919, 91);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 9;
@@ -156,11 +157,22 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "label3";
             // 
+            // resultados
+            // 
+            this.resultados.Location = new System.Drawing.Point(910, 120);
+            this.resultados.Name = "resultados";
+            this.resultados.Size = new System.Drawing.Size(84, 23);
+            this.resultados.TabIndex = 21;
+            this.resultados.Text = "Ver resultados";
+            this.resultados.UseVisualStyleBackColor = true;
+            this.resultados.Click += new System.EventHandler(this.Resultados_Click);
+            // 
             // Recuperacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 607);
+            this.Controls.Add(this.resultados);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -196,5 +208,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button resultados;
     }
 }

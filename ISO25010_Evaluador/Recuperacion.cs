@@ -114,5 +114,11 @@ namespace ISO25010_Evaluador
                  MessageBox.Show("Error");
              }
         }
+
+        private void Resultados_Click(object sender, EventArgs e)
+        {
+            reporte report = new reporte();
+            report.Show();
+        }
     }
 }
