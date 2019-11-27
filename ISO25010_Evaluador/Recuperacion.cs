@@ -80,8 +80,10 @@ namespace ISO25010_Evaluador
             
             try
             {
+                
                 int idSub = Convert.ToInt32(cbxSubCaracteristica.SelectedValue);
                 dgvChingueAsuMadreElAmerica.DataSource = objConexion.getOwO(idSub).Tables["hu"].DefaultView;
+
             }
             catch (Exception)
             {

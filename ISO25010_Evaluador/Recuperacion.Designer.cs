@@ -41,6 +41,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.resultados = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChingueAsuMadreElAmerica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +87,7 @@
             this.dgvChingueAsuMadreElAmerica.AllowUserToAddRows = false;
             this.dgvChingueAsuMadreElAmerica.AllowUserToDeleteRows = false;
             this.dgvChingueAsuMadreElAmerica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChingueAsuMadreElAmerica.Location = new System.Drawing.Point(28, 156);
+            this.dgvChingueAsuMadreElAmerica.Location = new System.Drawing.Point(28, 221);
             this.dgvChingueAsuMadreElAmerica.Name = "dgvChingueAsuMadreElAmerica";
             this.dgvChingueAsuMadreElAmerica.Size = new System.Drawing.Size(966, 374);
             this.dgvChingueAsuMadreElAmerica.TabIndex = 8;
@@ -167,11 +169,31 @@
             this.resultados.UseVisualStyleBackColor = true;
             this.resultados.Click += new System.EventHandler(this.Resultados_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(28, 119);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Descripción:";
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(28, 132);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(151, 13);
+            this.lblDescripcion.TabIndex = 23;
+            this.lblDescripcion.Text = "En este label va la descripcion";
+            // 
             // Recuperacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 607);
+            this.Controls.Add(this.lblDescripcion);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.resultados);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -209,5 +231,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button resultados;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblDescripcion;
     }
 }
